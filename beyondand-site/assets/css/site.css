@@ -6,6 +6,7 @@
 */
 
 :root {
+  /* Palette C — warm charcoal (editorial / print register) */
   --bg: #2D2A26;
   --bg-card: #3A3631;
   --bg-elevated: #46413B;
@@ -277,7 +278,7 @@ nav.primary a.is-active { border-bottom: 1px solid var(--accent); padding-bottom
 @media (max-width: 580px) { .amp-grid { grid-template-columns: 1fr; } }
 
 .amp-cell {
-  background: var(--bg);
+  background: var(--bg-card);
   padding: 32px 30px 30px;
   display: flex;
   flex-direction: column;
@@ -288,7 +289,7 @@ nav.primary a.is-active { border-bottom: 1px solid var(--accent); padding-bottom
   min-height: 340px;
   transition: background 0.2s ease;
 }
-.amp-cell:hover { background: var(--bg-card); }
+.amp-cell:hover { background: var(--bg-elevated); }
 .amp-cell .num {
   font-size: 11.5px;
   letter-spacing: 0.2em;
@@ -527,14 +528,14 @@ nav.primary a.is-active { border-bottom: 1px solid var(--accent); padding-bottom
 }
 @media (max-width: 760px) { .practice-cards { grid-template-columns: 1fr; } }
 .practice-card {
-  background: var(--bg);
+  background: var(--bg-card);
   padding: 28px 26px;
   display: flex;
   flex-direction: column;
   gap: 12px;
   transition: background 0.2s ease;
 }
-.practice-card:hover { background: var(--bg-card); }
+.practice-card:hover { background: var(--bg-elevated); }
 .practice-card .conjunction {
   font-family: "Newsreader", serif;
   font-weight: 500;
@@ -621,7 +622,8 @@ footer .lede {
   max-width: 360px;
   color: var(--ink);
 }
-footer .lede em { font-style: italic; color: var(--accent); }
+footer .lede em { font-style: italic; color: var(--ink); font-weight: 500; }
+footer .lede em .hl { color: var(--accent); }
 footer .lede .amp { color: var(--accent); font-style: italic; padding: 0 0.04em; }
 footer .colhead {
   font-size: 12px;
