@@ -6,14 +6,14 @@
 */
 
 :root {
-  --bg: #2A2E36;
-  --bg-card: #353A44;
-  --bg-elevated: #3F4651;
+  --bg: #2D2A26;
+  --bg-card: #3A3631;
+  --bg-elevated: #46413B;
   --ink: #F4EFE6;
-  --ink-mid: #B5B0A4;
-  --ink-soft: #8A8579;
-  --rule: #2A2F3C;
-  --rule-soft: #1F242F;
+  --ink-mid: #B8B2A4;
+  --ink-soft: #8C8678;
+  --rule: #221F1C;
+  --rule-soft: #1C1A17;
   --accent: #E8170B;
   --accent-deep: #B2110A;
   --accent-tint: rgba(232,23,11,0.12);
