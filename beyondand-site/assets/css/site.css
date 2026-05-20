@@ -459,6 +459,25 @@ nav.primary a.is-active { border-bottom: 1px solid var(--accent); padding-bottom
 .body-block p strong { color: var(--ink); font-weight: 600; }
 .body-block p em { font-family: "Newsreader", serif; font-style: italic; color: var(--ink); }
 
+/* Practice page "What lands here" deliverable lists — italic serif labels.
+   Exactly one label per page carries .amp-label and renders in brand red:
+   the deliverable that *is* the & side of the practice name. */
+.body-block ul li {
+  padding: 4px 0;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink-mid);
+}
+.body-block ul li strong {
+  font-family: "Newsreader", Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.08em;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+}
+.body-block ul li strong.amp-label { color: var(--accent); }
+
 .body-block h2 {
   font-family: "Newsreader", serif;
   font-weight: 500;
