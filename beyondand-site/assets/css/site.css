@@ -130,12 +130,41 @@ nav.primary a.is-active { border-bottom: 1px solid var(--accent); padding-bottom
   margin: 0 0.05em;
 }
 .hero h1 .period { color: var(--accent); }
+.hero .subhero {
+  font-family: "Newsreader", serif;
+  font-weight: 500;
+  font-size: clamp(26px, 3.2vw, 40px);
+  line-height: 1.2;
+  letter-spacing: -0.018em;
+  color: var(--ink);
+  max-width: 900px;
+  margin: 0 0 20px;
+}
+.hero .subhero .amp {
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 500;
+  display: inline-block;
+  margin: 0 0.05em;
+}
+.hero .three-beat {
+  font-size: clamp(15px, 1.4vw, 18px);
+  color: var(--ink-mid);
+  letter-spacing: 0.01em;
+  margin: 0 0 32px;
+}
 .hero .opener {
   max-width: 720px;
   font-size: clamp(18px, 1.7vw, 22px);
   line-height: 1.55;
   color: var(--ink-mid);
   margin: 0 0 32px;
+}
+.hero .opener .amp {
+  color: var(--accent);
+  font-style: italic;
+  font-weight: 500;
+  padding: 0 0.05em;
 }
 .hero .opener em {
   font-family: "Newsreader", serif;
@@ -476,7 +505,10 @@ nav.primary a.is-active { border-bottom: 1px solid var(--accent); padding-bottom
   letter-spacing: -0.005em;
   color: var(--ink);
 }
-.body-block ul li strong.amp-label { color: var(--accent); }
+/* .amp-label class is currently inert — kept on the conjunction-side deliverable
+   in case we want to layer subtle differentiation back in later. The red brand
+   accent now lives on the thesis pull-quote phrase instead. */
+.body-block ul li strong.amp-label { color: var(--ink); }
 
 .body-block h2 {
   font-family: "Newsreader", serif;
