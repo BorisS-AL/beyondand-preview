@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Send a longer brief &mdash; Beyond&amp;</title>
+<meta name="description" content="Sponsor-led, mid-process, multi-entity engagements. Partner-level review, honest read-back to follow.">
+<meta property="og:title" content="Send a longer brief &mdash; Beyond&amp;">
+<meta property="og:description" content="Sponsor-led, mid-process, multi-entity engagements. Partner-level review, honest read-back to follow.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500;1,6..72,600;1,6..72,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+<style>
+  /* Beyond& form styling — minimal, self-contained */
+  .form-wrap { padding: 24px 0 80px; }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 24px; max-width: 760px; }
+  .field { display: flex; flex-direction: column; gap: 8px; }
+  .field.full { grid-column: 1 / -1; }
+  .field label { font-size: 12.5px; font-weight: 600; letter-spacing: 0.06em; color: var(--ink-mid); text-transform: uppercase; }
+  .field input, .field select, .field textarea {
+    background: var(--bg-card); color: var(--ink); border: 1px solid var(--rule);
+    padding: 12px 14px; font-family: "Inter", sans-serif; font-size: 15px;
+    border-radius: 4px; transition: border-color 0.18s ease;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--accent); }
+  .field textarea { min-height: 160px; resize: vertical; }
+  .field .help { font-size: 13px; color: var(--ink-soft); font-style: italic; }
+  .honeypot { display: none !important; }
+  .submit {
+    background: var(--accent); color: var(--ink); border: none;
+    padding: 14px 28px; border-radius: 999px; font-size: 15px; font-weight: 600;
+    letter-spacing: -0.005em; cursor: pointer; font-family: "Inter", sans-serif;
+    transition: background 0.18s ease;
+  }
+  .submit:hover { background: var(--accent-deep); }
+  @media (max-width: 720px) { .form-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap nav">
+    <a href="/" class="wordmark">
+      Beyond<span class="amp">&amp;</span>
+      <span class="small">Sponsor-grade finance &middot; one accountable conversation</span>
+    </a>
+    <nav class="primary" aria-label="Primary">
+      <a href="/practices/">Practices</a>
+      <a href="/field-notes/">Field notes</a>
+      <a href="/people/">People</a>
+      <a href="/about/">About</a>
+    </nav>
+    <a class="cta-pill" href="/diagnostic/">Start a 30-min diagnostic &rarr;</a>
+  </div>
+</header>
+
+<div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span>Send a longer brief</nav></div>
+
+<section class="page-hero wrap">
+  <div class="label">Larger engagement</div>
+  <h1>Send the <em>brief</em>.</h1>
+  <p class="lede">Sponsor-driven, mid-process on a carve-out, or running a multi-entity stabilisation? The diagnostic isn&rsquo;t the right shape. Send us the brief and we&rsquo;ll come back with a proposal aligned to the calendar you actually have.</p>
+</section>
+
+<section class="wrap form-wrap">
+  <form name="beyondand-rfp" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/">
+    <input type="hidden" name="form-name" value="beyondand-rfp">
+    <input type="hidden" name="source" value="beyondand">
+    <input type="hidden" name="_subject" value="Beyond&amp; · RFP">
+    <p class="honeypot"><label>Don&rsquo;t fill this out if you&rsquo;re human: <input name="bot-field"></label></p>
+
+    <div class="form-grid">
+      <div class="field">
+        <label for="r-name">Your name</label>
+        <input type="text" id="r-name" name="name" required>
+      </div>
+      <div class="field">
+        <label for="r-title">Title</label>
+        <input type="text" id="r-title" name="title">
+      </div>
+
+      <div class="field">
+        <label for="r-company">Company / fund</label>
+        <input type="text" id="r-company" name="company" required>
+      </div>
+      <div class="field">
+        <label for="r-email">Work email</label>
+        <input type="email" id="r-email" name="email" required>
+      </div>
+
+      <div class="field full">
+        <label for="r-practice">Which practice does this map to?</label>
+        <select id="r-practice" name="practice">
+          <option value="">Pick the closest fit</option>
+          <option value="close-and-disclose">Close &amp; Disclose</option>
+          <option value="order-to-cash">AP, AR &amp; Predictive Collections</option>
+          <option value="fpa-and-cfo-services">FPnA &amp; Sponsor Reporting</option>
+          <option value="audit-and-internal-audit">IA &amp; Continuous Monitoring</option>
+          <option value="deal-and-valuation">Diligence &amp; 100-Day Plan</option>
+          <option value="grc-it-risk-esg">Controls &amp; Conviction</option>
+          <option value="multi-practice">Multi-practice / multi-entity</option>
+        </select>
+      </div>
+
+      <div class="field full">
+        <label for="r-context">The brief, in your own words.</label>
+        <textarea id="r-context" name="context" placeholder="Sponsor and portco names, calendar pressure, current state, what good looks like, any constraints we should know up front."></textarea>
+      </div>
+
+      <div class="field full">
+        <button class="submit" type="submit">Send the brief &rarr;</button>
+      </div>
+    </div>
+  </form>
+</section>
+
+<script>
+  (function(){
+    var p = new URLSearchParams(window.location.search).get('practice');
+    if (p) { var sel = document.getElementById('r-practice'); if (sel) sel.value = p; }
+  })();
+</script>
+<footer class="site">
+  <div class="wrap">
+    <div class="top">
+      <div class="col">
+        <p class="lede">Beyond<span class="amp">&amp;</span>. <em>Beyond ordinary. Beyond transactional. Beyond traditional.</em></p>
+      </div>
+      <div class="col">
+        <div class="colhead">Practices</div>
+        <ul>
+          <li><a href="/practices/">All practices</a></li>
+          <li><a href="/practices/close-and-disclose/">Close &amp; Disclose</a></li>
+          <li><a href="/practices/order-to-cash/">AP, AR &amp; Predictive Collections</a></li>
+          <li><a href="/practices/fpa-and-cfo-services/">FPnA &amp; Sponsor Reporting</a></li>
+          <li><a href="/practices/audit-and-internal-audit/">IA &amp; Continuous Monitoring</a></li>
+          <li><a href="/practices/deal-and-valuation/">Diligence &amp; 100-Day Plan</a></li>
+          <li><a href="/practices/grc-it-risk-esg/">Controls &amp; Conviction</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="colhead">Brand</div>
+        <ul>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/people/">People</a></li>
+          <li><a href="/field-notes/">Field notes</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <div class="colhead">Talk to us</div>
+        <ul>
+          <li><a href="/diagnostic/">30-min diagnostic</a></li>
+          <li><a href="/rfp/">Send a longer brief</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="partnership">
+        A joint venture of <strong>Arthur Lawrence</strong> <span class="amp">&amp;</span> <strong>theBPO</strong>.<br>
+        Houston &middot; Dallas &middot; Suwanee &middot; Karachi &middot; Surrey &middot; Jeddah &middot; Mississauga &middot; Saskatoon.
+      </div>
+      <div class="copy">&copy; 2026 Beyond&amp;<span>&middot;</span>All rights reserved<span>&middot;</span>Preview build</div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>

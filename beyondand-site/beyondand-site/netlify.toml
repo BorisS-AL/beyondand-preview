@@ -1,0 +1,30 @@
+# Beyond& slim — Netlify config
+
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/sectors/*"
+  to = "https://al-fas-preview.netlify.app/sectors/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/case-studies/*"
+  to = "https://al-fas-preview.netlify.app/case-studies/:splat"
+  status = 301
+
+# /diagnostic/ and /rfp/ are now served from beyondand-site directly (Beyond&-owned intake).
+# Previous redirects to al-fas-preview were removed 2026-06-01 so Beyond& captures its own interest.
+
+# Catch-all 404
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
