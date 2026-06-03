@@ -1,0 +1,169 @@
+/*
+  Beyond& — brand-layered.css
+  Partial brand-spec adoption.
+  Body, nav, buttons, forms, footer: Poppins per spec.
+  HERO DISPLAYS + AMPERSAND BRAND MARK: stay Newsreader/italic (the conjunction is the brand).
+  Background: keeps the dark warm charcoal — visual signature stays intact.
+  Buttons: navy per spec. Red still appears as ampersand glyph + emphasis.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bl-red: #e8170b;
+  --bl-red-deep: #a5110e;
+  --bl-navy: #38507e;
+  --bl-navy-deep: #233d68;
+  --bl-bg: #2D2A26;       /* keep warm charcoal — Beyond& signature */
+  --bl-bg-soft: #3A3631;
+  --bl-ink: #F4EFE6;      /* keep cream ink */
+  --bl-ink-soft: #B8B2A4;
+  --bl-rule: #221F1C;
+}
+
+/* ---------- Body — Poppins, keep dark bg ---------- */
+body {
+  font-family: "Poppins", system-ui, -apple-system, sans-serif !important;
+  background: var(--bl-bg) !important;
+  color: var(--bl-ink) !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+}
+
+/* ---------- KEEP Newsreader for hero displays + ampersand mark ---------- */
+.display, .hero h1, .page-hero h1, h1.display,
+.italic-display, .conjunction, .subhero,
+.amp-grid-heading, .three-beat {
+  font-family: "Newsreader", Georgia, serif !important;
+}
+
+/* Ampersand brand mark — keep italic + red (this IS Beyond&'s brand) */
+.amp, h1 .amp, .conjunction .amp, .opener .amp, .subhero .amp, .wordmark .amp {
+  font-family: "Newsreader", serif !important;
+  font-style: italic !important;
+  color: var(--bl-red) !important;
+  font-weight: 500 !important;
+}
+
+/* H2-H4 → Poppins for sub-page headings */
+h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  color: var(--bl-ink) !important;
+}
+h2 { font-size: 32px !important; line-height: 1.2 !important; }
+h3 { font-size: 24px !important; line-height: 1.25 !important; }
+h4 { font-size: 18px !important; line-height: 1.3 !important; }
+
+/* ---------- Body text — Poppins ---------- */
+p, ul, ol, li, .desc, .body, .body-block p {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  color: var(--bl-ink) !important;
+  line-height: 1.6 !important;
+}
+
+.opener, .lede, .page-hero .lede {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 18px !important;
+  color: var(--bl-ink-soft) !important;
+}
+
+/* Em inside paragraphs — keep Newsreader italic for editorial pull-quote moments */
+.opener em, .lede em, .quote em, .thesis em, .italic-display, p em {
+  font-family: "Newsreader", Georgia, serif !important;
+  font-style: italic !important;
+  color: var(--bl-ink) !important;
+}
+
+.quote {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 300 !important;
+  font-size: 18px !important;
+  font-style: normal !important;
+}
+
+/* ---------- Section labels / kickers — navy ---------- */
+.hero .kicker, .page-hero .label, .colhead, .small, .amp-grid-label .meta {
+  font-family: "Poppins", sans-serif !important;
+  color: var(--bl-navy) !important;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.08em !important;
+  font-size: 12px !important;
+}
+
+/* ---------- Navigation — Poppins ---------- */
+.wordmark { font-family: "Newsreader", Georgia, serif !important; color: var(--bl-ink) !important; }
+.wordmark .small { font-family: "Poppins", sans-serif !important; color: var(--bl-navy) !important; }
+
+nav.primary a {
+  font-family: "Poppins", sans-serif !important;
+  color: var(--bl-ink-soft) !important;
+  font-weight: 500 !important;
+}
+nav.primary a:hover { color: var(--bl-red) !important; }
+
+/* ---------- Buttons — navy per spec ---------- */
+.cta-pill, .submit, button[type="submit"], .convert-path {
+  background: var(--bl-navy) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--bl-navy) !important;
+  border-radius: 3px !important;
+  padding: 18px 38px !important;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  letter-spacing: 0 !important;
+  display: inline-block !important;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+.cta-pill:hover, .submit:hover, button[type="submit"]:hover, .convert-path:hover {
+  background: var(--bl-bg-soft) !important;
+  color: var(--bl-navy) !important;
+}
+
+.cta-secondary {
+  background: transparent !important;
+  border: 1px solid var(--bl-navy) !important;
+  border-radius: 3px !important;
+  color: var(--bl-ink) !important;
+  padding: 18px 38px !important;
+  font-family: "Poppins", sans-serif !important;
+}
+.cta-secondary:hover { border-color: var(--bl-red) !important; color: var(--bl-red) !important; }
+
+/* ---------- Forms ---------- */
+input, textarea, select, label, .field label {
+  font-family: "Poppins", sans-serif !important;
+  font-size: 16px !important;
+}
+.field label {
+  color: var(--bl-navy) !important;
+  text-transform: uppercase !important;
+  font-size: 12px !important;
+  letter-spacing: 0.08em !important;
+  font-weight: 600 !important;
+}
+input, textarea, select {
+  background: var(--bl-bg-soft) !important;
+  color: var(--bl-ink) !important;
+  border: 1px solid var(--bl-rule) !important;
+  border-radius: 3px !important;
+}
+input:focus, textarea:focus, select:focus { border-color: var(--bl-navy) !important; outline: none !important; }
+
+/* ---------- Footer ---------- */
+footer.site .colhead, footer.site ul li a, footer.site .partnership, footer.site .copy {
+  font-family: "Poppins", sans-serif !important;
+}
+footer.site a:hover { color: var(--bl-red) !important; }
+
+/* ---------- Anchors ---------- */
+a:hover { color: var(--bl-red) !important; }
+
+/* ---------- Breadcrumbs ---------- */
+.crumbs { font-family: "Poppins", sans-serif !important; }
+.crumbs .sep { color: var(--bl-navy) !important; }
